@@ -1,0 +1,193 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/cirpass2/battery-passport/v1",
+    "https://gs1.org/voc/"
+  ],
+  "@type": "BatteryPassport",
+  "@id": "https://id.eurocell-mobility.eu/01/04260999881011/21/EV-2027-000842",
+  "lifecycleMetadata": {
+    "dppSchemaVersion": "CIRPASS-2/EN18222:2026-v1.0",
+    "passportStatus": "active",
+    "apiEndpoint": "https://dpp.eurocell-mobility.eu/api/v1/passports",
+    "issuedAt": "2027-01-15T08:30:00Z",
+    "lastUpdatedAt": "2027-02-01T12:00:00Z"
+  },
+  "public": {
+    "economicOperator": {
+      "name": "EuroCell Mobility Systems GmbH",
+      "identifier": "DE-EORI-4455667788",
+      "contactAddress": "Batteriepark Allee 22, 38239 Salzgitter, Germany",
+      "contactEmail": "passport@eurocell-mobility.eu"
+    },
+    "batteryCategory": "EV",
+    "batteryModel": "ECM-HV800-NMC811-82K",
+    "serialOrBatchNumber": "EV-2027-000842",
+    "manufacturing": {
+      "plantName": "Salzgitter Gigafactory Line B",
+      "facilityId": "DE-SALZ-GF02",
+      "countryCode": "DE",
+      "manufacturingDate": "2027-01-12"
+    },
+    "technicalSpecs": {
+      "weightKg": 445.0,
+      "nominalVoltageV": 768.0,
+      "ratedCapacityAh": 106.8,
+      "ratedEnergyKwh": 82.0
+    },
+    "chemistry": {
+      "chemistryType": "NMC811",
+      "cathodeMaterial": "LiNi0.8Mn0.1Co0.1O2",
+      "anodeMaterial": "Silicon-doped synthetic graphite",
+      "electrolyte": "LiPF6 in EC/EMC/DEC carbonate blend"
+    },
+    "hazardousSubstances": {
+      "present": true,
+      "substances": [
+        {
+          "name": "Lithium hexafluorophosphate",
+          "casNumber": "21324-40-3",
+          "location": "Prismatic cells electrolyte",
+          "concentrationPct": 1.4
+        },
+        {
+          "name": "Nickel(II) oxide composite",
+          "casNumber": "1313-99-1",
+          "location": "Cathode active matrix",
+          "concentrationPct": 24.8
+        }
+      ]
+    },
+    "criticalRawMaterials": {
+      "cobalt": { "massKg": 7.9, "sharePct": 1.78 },
+      "lithium": { "massKg": 9.4, "sharePct": 2.11 },
+      "nickel": { "massKg": 62.3, "sharePct": 14.0 }
+    },
+    "carbonFootprint": {
+      "totalKgCo2ePerKwh": 56.8,
+      "calculationMethodology": "Regulation (EU) 2023/1542 Annex II / PEFCR",
+      "performanceClass": "B",
+      "publicStudyUrl": "https://dpp.eurocell-mobility.eu/studies/cf-ecm-hv800-2027.pdf",
+      "lifecycleStages": {
+        "rawMaterialAcquisition": 35.1,
+        "manufacturing": 16.4,
+        "distribution": 1.9,
+        "endOfLife": 3.4
+      }
+    },
+    "recycledContent": {
+      "cobaltPct": 16.5,
+      "leadPct": 85.0,
+      "lithiumPct": 6.2,
+      "nickelPct": 6.4
+    },
+    "euDeclarationOfConformity": {
+      "declarationId": "EU-DOC-ECM-2027-82K",
+      "issueDate": "2027-01-14",
+      "ceMarkingConfirmed": true,
+      "documentUrl": "https://dpp.eurocell-mobility.eu/conformity/eu-doc-2027.pdf"
+    },
+    "endOfLifeAndSafety": {
+      "separateCollectionSymbol": true,
+      "extinguishingAgent": "High-volume water mist, CO2, or F-500 encapsulator agent",
+      "safetyInstructionsUrl": "https://dpp.eurocell-mobility.eu/safety/ev-pack-response-guide.pdf"
+    },
+    "performanceIndicators": {
+      "expectedLifetimeCycles": 2500,
+      "expectedLifetimeYears": 12,
+      "roundTripEfficiencyPct": 94.2
+    }
+  },
+  "legitimateInterest": {
+    "accessPolicy": {
+      "accessScope": "restricted_legitimate_interest",
+      "authMethod": "eIDAS_OIDC_VC",
+      "authorizedRoles": [
+        "repairer",
+        "remanufacturer",
+        "second_life_operator",
+        "recycler"
+      ]
+    },
+    "dismantlingInfo": {
+      "manualUrl": "https://dpp.eurocell-mobility.eu/restricted/dismantling-hv800.pdf",
+      "explodedDiagramsUrl": "https://dpp.eurocell-mobility.eu/restricted/exploded-hv800.svg",
+      "requiredTools": [
+        "1000V insulated torque wrench set",
+        "Thermal imaging camera",
+        "Class 0 HV insulating gloves"
+      ],
+      "highVoltageSafetyProtocol": "Engage pyro-fuse service disconnect, lock-out/tag-out, wait 15 minutes, confirm <60V DC at pack terminals before cover removal."
+    },
+    "spareParts": [
+      {
+        "partNumber": "ECM-CSC-800V-04",
+        "componentName": "Cell Supervision Circuit Module",
+        "supplierContact": "spares@eurocell-mobility.eu",
+        "availabilityYears": 12
+      },
+      {
+        "partNumber": "ECM-CNT-MAIN-09",
+        "componentName": "Main HV DC Contactor Assembly",
+        "supplierContact": "spares@eurocell-mobility.eu",
+        "availabilityYears": 10
+      }
+    ],
+    "detailedComposition": {
+      "cathodeActiveMaterial": "NMC811 (93 wt%) + carbon black (3.5 wt%) + PVDF (3.5 wt%) on Al foil",
+      "anodeActiveMaterial": "Graphite-SiOx (95 wt%) + SBR/CMC binder on Cu foil",
+      "electrolyteComposition": "1.1M LiPF6 in EC:EMC (3:7) + FEC/VC SEI stabilizers",
+      "hazardousComponentLocations": [
+        { "component": "High-voltage DC busbars", "location": "Central spine tunnel" },
+        { "component": "Prismatic cells electrolyte", "location": "Modules M1 through M12" }
+      ]
+    },
+    "dynamicHealthSchema": {
+      "stateOfHealthPct": 98.4,
+      "remainingCapacityAh": 105.1,
+      "fullChargeCycles": 42,
+      "deepDischargeEvents": 0,
+      "extremeTempExposureEvents": 0,
+      "lastTelemetryTimestamp": "2027-02-01T11:55:00Z",
+      "updateFrequency": "on_event"
+    }
+  },
+  "authorities": {
+    "accessPolicy": {
+      "accessScope": "market_surveillance_and_notified_bodies",
+      "notifiedBodyId": "NB-0123",
+      "competentAuthorityEndpoint": "https://dpp.eurocell-mobility.eu/authorities/v1/dossier"
+    },
+    "testReports": [
+      {
+        "reportId": "TR-DEKRA-2027-III",
+        "annexRef": "Annex III",
+        "standardRef": "Regulation (EU) 2023/1542 Annex III Sustainability & Labelling",
+        "accreditedLab": "DEKRA Testing & Certification GmbH",
+        "testDate": "2027-01-04",
+        "result": "PASS"
+      },
+      {
+        "reportId": "TR-TUVR-2027-IV",
+        "annexRef": "Annex IV",
+        "standardRef": "IEC 62660-1 / Annex IV Electrochemical Performance & Durability",
+        "accreditedLab": "TUV Rheinland Kraftfahrt GmbH",
+        "testDate": "2027-01-08",
+        "result": "PASS"
+      },
+      {
+        "reportId": "TR-TUVS-2027-V",
+        "annexRef": "Annex V",
+        "standardRef": "UN 38.3 / ECE R100 Rev.3 / Annex V Safety Parameters",
+        "accreditedLab": "TUV SUD Battery Testing Munich",
+        "testDate": "2027-01-10",
+        "result": "PASS"
+      }
+    ],
+    "conformityVerification": {
+      "assessmentModule": "Module D1",
+      "technicalDocumentationRef": "TD-ECM-HV800-2027-REV3",
+      "carbonFootprintVerificationRef": "CF-NB0123-ECM-2027-088"
+    }
+  }
+}
