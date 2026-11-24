@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dpp-battery-eu"
+version = "0.1.0"
+description = "Zero-dependency EU Battery Passport JSON-LD validator for Regulation (EU) 2023/1542 Annex XIII, CIRPASS-2, EN 18219:2026, and EN 18222:2026."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "EU DPP Compliance Studio", email = "compliance@dpp-battery-eu.example" },
+]
+keywords = [
+    "battery-passport",
+    "digital-product-passport",
+    "eu-2023-1542",
+    "annex-xiii",
+    "cirpass-2",
+    "en-18219",
+    "en-18222",
+    "gs1-digital-link",
+    "json-ld",
+    "espr",
+    "compliance",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Manufacturing",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Quality Assurance",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/normasuite-b2b/dpp-battery-eu"
+Documentation = "https://github.com/normasuite-b2b/dpp-battery-eu#readme"
+Repository = "https://github.com/normasuite-b2b/dpp-battery-eu"
+Issues = "https://github.com/normasuite-b2b/dpp-battery-eu/issues"
+
+[project.scripts]
+dpp-battery-eu = "dpp_battery_eu.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
