@@ -1,0 +1,111 @@
+{
+  "@context": "https://w3id.org/cirpass2/battery-passport/v1",
+  "@type": "BatteryPassport",
+  "@id": "https://id.industristorage.example/01/04260999881019",
+  "lifecycleMetadata": {
+    "dppSchemaVersion": "DRAFT-0.9",
+    "passportStatus": "active",
+    "issuedAt": "2026-11-01"
+  },
+  "public": {
+    "economicOperator": {
+      "name": "IndustriStorage Solutions S.L.",
+      "identifier": "ES-EORI-B12345678",
+      "contactAddress": "Poligono Industrial Norte 8, 46025 Valencia, Spain"
+    },
+    "batteryCategory": "Industrial_gt_2kWh",
+    "batteryModel": "IND-LFP-RACK-1800",
+    "serialOrBatchNumber": "BATCH-2026-IND-77",
+    "manufacturing": {
+      "plantName": "Valencia Assembly Hall 1",
+      "countryCode": "ES",
+      "manufacturingDate": "2026-10-28"
+    },
+    "technicalSpecs": {
+      "weightKg": 32.5,
+      "nominalVoltageV": 48.0,
+      "ratedCapacityAh": 37.5,
+      "ratedEnergyKwh": 1.8
+    },
+    "chemistry": {
+      "chemistryType": "LFP",
+      "cathodeMaterial": "LiFePO4",
+      "anodeMaterial": "Graphite",
+      "electrolyte": "LiPF6 carbonate solution"
+    },
+    "criticalRawMaterials": {
+      "lithium": 0.45
+    },
+    "carbonFootprint": {
+      "totalKgCo2ePerKwh": 71.2,
+      "calculationMethodology": "Internal estimate",
+      "lifecycleStages": {
+        "rawMaterialAcquisition": 44.0,
+        "manufacturing": 21.0,
+        "distribution": 2.7,
+        "endOfLife": 3.5
+      }
+    },
+    "recycledContent": {
+      "cobaltPct": 0.0,
+      "nickelPct": 0.0
+    },
+    "euDeclarationOfConformity": {
+      "declarationId": "DRAFT-DOC-2026",
+      "issueDate": "2026-10-29",
+      "ceMarkingConfirmed": false
+    },
+    "endOfLifeAndSafety": {
+      "separateCollectionSymbol": true,
+      "extinguishingAgent": "Dry powder",
+      "safetyInstructionsUrl": "https://industristorage.example/safety.pdf"
+    },
+    "performanceIndicators": {
+      "expectedLifetimeCycles": 4000,
+      "expectedLifetimeYears": 10,
+      "roundTripEfficiencyPct": 92.0
+    },
+    "dismantlingManualUrl": "https://industristorage.example/leak-internal-manual.pdf"
+  },
+  "legitimateInterest": {
+    "accessPolicy": {
+      "accessScope": "restricted_legitimate_interest",
+      "authMethod": "OAuth2_mTLS",
+      "authorizedRoles": ["repairer", "remanufacturer"]
+    },
+    "spareParts": [
+      {
+        "partNumber": "IND-MOD-48V",
+        "componentName": "48V Rack Module",
+        "supplierContact": "support@industristorage.example",
+        "availabilityYears": 8
+      }
+    ],
+    "detailedComposition": {
+      "cathodeActiveMaterial": "LiFePO4 92%",
+      "anodeActiveMaterial": "Graphite 95%",
+      "electrolyteComposition": "LiPF6 in EC/DMC",
+      "hazardousComponentLocations": ["Cell pack interior"]
+    }
+  },
+  "authorities": {
+    "accessPolicy": {
+      "accessScope": "market_surveillance_and_notified_bodies",
+      "competentAuthorityEndpoint": "https://industristorage.example/authorities"
+    },
+    "testReports": [
+      {
+        "reportId": "TR-IND-04",
+        "annexRef": "Annex IV",
+        "standardRef": "IEC 62620",
+        "accreditedLab": "EuroLab Iberia",
+        "testDate": "2026-10-15",
+        "result": "PASS"
+      }
+    ],
+    "conformityVerification": {
+      "assessmentModule": "Module A",
+      "technicalDocumentationRef": "TD-IND-2026"
+    }
+  }
+}
